@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  word-spacing: 2px;
+  background: linear-gradient(to right, #ffc78e, #fccbe5c5);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column1 {
+  flex: 25%;
+  max-width: 25%;
+  padding: auto;
+  padding-top: 90pt;
+  padding-left: 40pt;
+}
+
+.column2 {
+  flex: 25%;
+  max-width: 25%;
+  padding: auto;
+  padding-top: 90pt;
+  padding-left: 0 2px;
+}
+
+.column3 {
+  flex: 25%;
+  max-width: 50%;
+  padding-top: 220pt;
+  padding-left: 10pt;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: auto;  /*Adjust the width as needed */
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 240pt;
+  height: 200pt;
+  padding-bottom: 10pt;
+  object-fit: cover;
+}
+
+.image-container2 img {
+  width: 240pt;
+  height: 415pt;
+  object-fit: cover;
+  overflow: hidden;
+
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.card {
+  width: 400pt;
+  border-radius: 0px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+.card-content {
+  padding: 25px;
+  padding-left: 35pt;
+  background-color: #ff7373;
+}
+
+.card-content h2 {
+  font-style: bold;
+  font-size: 35pt;
+  letter-spacing: 5pt;
+}
+
+.card-content p {
+  margin-bottom: 0;
+}

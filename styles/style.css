@@ -1,0 +1,179 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  word-spacing: 2px;
+}
+
+.container {
+  display: flex;
+  /*flex-wrap: wrap;*/
+  height: 100vh; /* Set the height to 100% of the viewport height */
+}
+
+.left {
+  flex: 1;
+  padding-top: 100px;
+  padding-left: 90px;
+  padding-bottom: 60px;
+  padding-right: 30px;
+  box-sizing: border-box;
+  text-align: left;
+  background: linear-gradient(to right, #fff28e, #fccbe5c5); /* Change colors as desired */
+  color: rgb(0, 0, 0); /* Text color */
+}
+
+.right {
+  flex: 1;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.left h1 {
+  margin-top: 0;
+  font-weight: bold;
+  letter-spacing: 10px;
+  font-size: 45px;
+}
+
+.left p {
+  letter-spacing: 1px;
+  font-weight: 350;
+  font-size: 18px;
+  padding-bottom: 40px;
+  padding-top: 40px;
+  padding-right: 50px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 80px;
+  background-color: #ff8484;
+  color: white;
+  text-decoration: none;
+  border-radius: 0px;
+  transition: background-color 0.3s;
+  letter-spacing: 1px;
+  font-weight: 350;
+  font-size: 18px;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: auto;  /*Adjust the width as needed */
+  overflow: hidden;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .left,
+  .right {
+    width: 100%;
+  }
+}
+
+/* Navigation */
+.navbar {
+  background-color: #ff7171;
+  overflow: hidden;
+  padding-bottom: 5px;
+  padding-left: 150pt;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 550;
+  letter-spacing: 2px;
+  padding-left: 25pt;
+  padding-right: 25pt;
+}
+
+.navbar a:hover {
+  background-color: #ffbebe;
+  color: black;
+  transition: background-color 0.3s;
+}
+
+.navbar .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child) {
+    display: none;
+  }
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {
+    position: relative;
+  }
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding: 1px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column  {
+      width: screen;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column  {
+      width: screen;
+    }
+  }
+
+  .responsive {
+    width: 100%;
+    height: auto;
+  }
